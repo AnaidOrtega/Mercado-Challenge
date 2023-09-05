@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build:dev": "tsc --watch --preserveWatchOutput",
-    "start": "ts-node-esm server/index.ts"
+    "start:server": "ts-node-esm server/index.ts",
+    "start:client": "(cd client && npm run serve)"
   },
   "keywords": [],
   "author": "",
