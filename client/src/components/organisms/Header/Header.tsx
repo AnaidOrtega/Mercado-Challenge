@@ -1,12 +1,15 @@
 import React from 'react'
 import styles from './header.module.scss'
-import { MercadoLibre } from '../../../assets'
+import { Meli, Meli2x } from '../../../assets'
 import { SearchBar } from '../../molecules'
+import { useWindowSize } from '../../../hooks/useWindowSize'
 
 export const Header = () => {
+  const { width } = useWindowSize()
+  const isMobile = width <= 576
   return (
     <div className={styles.header}>
-      <MercadoLibre width={50} height={50} />
+      <img src={isMobile ? Meli : Meli2x} />
       <SearchBar placeholder="Nunca dejes de buscar" />
     </div>
   )

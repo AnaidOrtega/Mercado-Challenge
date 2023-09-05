@@ -1,8 +1,8 @@
 import React from 'react'
-import { ProductListItem } from '../../'
+import { CategoriesView, ProductListItem } from '../../'
 import styles from './productList.module.scss'
 import { useLoaderData } from 'react-router-dom'
-import { ViewProductList } from '../../../models/products'
+import { ViewProductList } from '../../../interfaces/products'
 
 export interface ProductListData {
   data: ViewProductList
@@ -13,7 +13,10 @@ export const ProductList = () => {
 
   return (
     <div className={styles.productList}>
-      {data?.items.map((p) => <ProductListItem item={p} key={p.id} />)}
+      <CategoriesView categories={data?.categories} />
+      <div className={styles.productList__list}>
+        {data?.items.map((p) => <ProductListItem item={p} key={p.id} />)}
+      </div>
     </div>
   )
 }

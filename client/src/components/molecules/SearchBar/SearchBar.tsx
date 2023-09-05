@@ -1,8 +1,8 @@
 import React, { FC, useState } from 'react'
 import { Button } from '../..'
 import styles from './searchBar.module.scss'
-import { Search } from '../../../assets'
 import { useNavigate } from 'react-router-dom'
+import { SearchImage } from '../../../assets'
 
 export interface SearchBarProps {
   placeholder?: string
@@ -26,7 +26,7 @@ export const SearchBar: FC<SearchBarProps> = ({ placeholder }) => {
     >
       <input placeholder={placeholder} onChange={(e) => setSearch(e.target.value)} />
       <Button type="submit" color="secondary">
-        <Search width={18} height={18} />
+        <img src={SearchImage} />
       </Button>
     </form>
   )

@@ -8,6 +8,7 @@ export interface ProductDetails {
   shipping: Shipping
   currency_id: string
   pictures: Picture[]
+  category_id: string
   sold_quantity: number
 }
 
@@ -30,6 +31,7 @@ export interface ViewProductDetails {
     description: string
     sold_quantity: number
     free_shipping: boolean
+    categories: string[]
   }
 }
 

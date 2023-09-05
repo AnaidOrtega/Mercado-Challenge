@@ -1,15 +1,4 @@
-import { Price, Shipping } from './products'
-
-export interface ProductDetails {
-  id: string
-  title: string
-  price: number
-  condition: string
-  shipping: Shipping
-  currency_id: string
-  pictures: Picture[]
-  sold_quantity: number
-}
+import { Price } from './products'
 
 export interface Picture {
   id: string
@@ -30,9 +19,6 @@ export interface ViewProductDetails {
     description: string
     sold_quantity: number
     free_shipping: boolean
+    categories: string[]
   }
-}
-
-export interface ProductDescription {
-  plain_text: string
 }

@@ -1,4 +1,4 @@
-import { Price } from '../models/products'
+import { Price } from '../interfaces/products'
 
 export const formatPrice = (price?: Price) => {
   if (price) {

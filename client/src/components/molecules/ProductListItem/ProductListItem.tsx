@@ -1,7 +1,7 @@
 import React, { FC } from 'react'
 import styles from './productListItem.module.scss'
 import { ShippingCartImg } from '../../../assets'
-import { ViewSingleProduct } from '../../../models/products'
+import { ViewSingleProduct } from '../../../interfaces/products'
 import { useNavigate } from 'react-router-dom'
 import { formatPrice } from '../../../utils/priceFormatter'
 

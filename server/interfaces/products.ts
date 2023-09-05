@@ -3,19 +3,27 @@ export interface Author {
   lastname: string
 }
 
-export interface Paging {
-  total: number
-  limit: number
-  offset: number
-  primary_results: number
-}
-
 export interface Shipping {
   free_shipping: boolean
 }
 
-export interface Filter {
+export interface Value {
+  id: string
   name: string
+  path_from_root: PathFromRoot[]
+}
+
+export interface PathFromRoot {
+  id: string
+  name: string
+}
+
+export interface Filter {
+  values: Value[]
+  id: string
+}
+export interface Filters {
+  filters: Filter[]
 }
 
 export interface Address {
@@ -69,4 +77,8 @@ export interface ViewProductList {
   author: Author
   categories: string[]
   items: ViewSingleProduct[]
+}
+
+export interface ProductCategories {
+  path_from_root: PathFromRoot[]
 }

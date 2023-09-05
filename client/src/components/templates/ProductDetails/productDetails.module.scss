@@ -1,11 +1,14 @@
 @import "../../../styles/styles.scss";
 
 .details {
-    flex: 1;
-    @include row(32px);
-    background: white;
-    margin-bottom: 20px;
-    padding: 32px;
+    @include column(16px);
+    &__container {
+        flex: 1;
+        @include row(32px);
+        background: white;
+        margin-bottom: 20px;
+        padding: 32px;
+    }
 
     &__right {
         width: 70%;

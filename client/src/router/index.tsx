@@ -24,8 +24,6 @@ export const router = createBrowserRouter([
         element: <ProductDetails />,
         loader: async ({ params }) => {
           const data = await getProductDetail(params.itemId ?? '')
-          console.log('DATA HERE', data)
-
           return {
             data,
           }

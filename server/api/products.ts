@@ -27,3 +27,10 @@ export const getProductDescription = async (itemId: string) => {
     return description.data
   } catch (error) {}
 }
+
+export const getProductCategories = async (categoryId: string) => {
+  try {
+    const description = await API.get(`categories/${categoryId}`)
+    return description.data
+  } catch (error) {}
+}
