@@ -14,6 +14,10 @@ app.use((req: Request, res: Response, next: NextFunction) => {
 
 app.use(productsRouter)
 
+app.all('*', async (req, res) => {
+  res.status(404).send('Page not found :(')
+})
+
 app.get('/', (req: Request, res: Response, next: NextFunction) => {
   res.send('Mercado Libre Challenge')
 })
