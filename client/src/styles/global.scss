@@ -1,0 +1,22 @@
+@use "variables" as v;
+
+body {
+    background: v.$tertiary;
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+    font-family:
+        "Proxima Nova",
+        -apple-system,
+        Roboto,
+        Arial,
+        sans-serif,
+        sans-serif;
+}
+
+p {
+    color: v.$black;
+    margin: 0;
+}

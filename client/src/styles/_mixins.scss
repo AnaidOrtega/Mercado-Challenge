@@ -1,0 +1,15 @@
+@mixin row($gap: 20px) {
+    gap: $gap;
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin column($gap: 20px) {
+    gap: $gap;
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin layoutPadding($paddingVertical: 10px) {
+    padding: $paddingVertical 10%;
+}

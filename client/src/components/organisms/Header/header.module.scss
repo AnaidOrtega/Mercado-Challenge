@@ -1,0 +1,8 @@
+@import "../../../styles/styles.scss";
+
+.header {
+    @include row;
+    height: 65px;
+    @include layoutPadding;
+    background-color: $primary;
+}

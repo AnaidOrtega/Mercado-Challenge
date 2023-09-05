@@ -1,0 +1,13 @@
+@import "../../../styles/styles.scss";
+.categories {
+    @include row(5px);
+    &__categorie {
+        @include row(5px);
+        align-items: center;
+    }
+
+    &__helperText {
+        font-size: 14px;
+        color: $lightGrey;
+    }
+}

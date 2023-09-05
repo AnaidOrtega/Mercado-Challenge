@@ -1,0 +1,56 @@
+@import "../../../styles/styles.scss";
+
+.details {
+    @include column(16px);
+    &__container {
+        flex: 1;
+        @include row(32px);
+        background: white;
+        margin-bottom: 20px;
+        padding: 32px;
+    }
+
+    &__right {
+        width: 70%;
+        @include column;
+    }
+    &__left {
+        @include column(32px);
+    }
+    &__imgContainer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__img {
+        max-width: 680px;
+        height: 100%;
+    }
+    &__info {
+        width: 30%;
+        @include column(0);
+    }
+    &__helperText {
+        font-size: 14px;
+        margin-bottom: 16px;
+    }
+    &__title {
+        font-size: 24px;
+        font-weight: bold;
+    }
+    &__price {
+        font-size: 46px;
+        margin: 32px 0;
+        @include row(0);
+        sub {
+            font-size: 24px;
+        }
+    }
+    &__titleDescription {
+        font-size: 28px;
+    }
+    &__description {
+        font-size: 16px;
+        color: $lightGrey;
+    }
+}
