@@ -1,0 +1,18 @@
+@import "../../../styles/styles.scss";
+
+.searchBar {
+    width: 100%;
+    @include row(0);
+
+    input {
+        flex: 1;
+        height: 100%;
+        border: none;
+        outline: none;
+        display: flex;
+        font-size: 18px;
+        padding: 5px 20px;
+        line-height: 100%;
+        border-radius: 2px 0 0 2px;
+    }
+}

@@ -1,0 +1,19 @@
+@import "../../../styles/styles.scss";
+
+.button {
+    border: none;
+    outline: none;
+    padding: 10px 15px;
+    @include row;
+    justify-content: center;
+    align-items: center;
+}
+
+.primary {
+    background-color: $secondary;
+    color: white;
+}
+
+.secondary {
+    background-color: $tertiary;
+}

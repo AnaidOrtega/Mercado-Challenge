@@ -1,0 +1,9 @@
+@import "../../../styles/styles.scss";
+
+.productList {
+    flex: 1;
+    @include column(0);
+    background: white;
+    margin-bottom: 20px;
+    padding: 0 16px;
+}

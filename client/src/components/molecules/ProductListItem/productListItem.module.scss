@@ -1,0 +1,46 @@
+@import "../../../styles/styles.scss";
+
+.productItem {
+    padding: 16px 0;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid $tertiary;
+    cursor: pointer;
+    @include row(0);
+    background: white;
+
+    &__img {
+        width: 180px;
+        height: 180px;
+        border-radius: 4px;
+    }
+
+    &__content {
+        flex: 1;
+        padding: 16px;
+        @include column(32px);
+        text-align: left;
+    }
+
+    &__priceView {
+        @include row(10px);
+        align-items: center;
+    }
+
+    &__price {
+        font-size: 24px;
+    }
+
+    &__description {
+        font-size: 18px;
+    }
+
+    &__place {
+        font-size: 12px;
+        margin: 16px;
+    }
+    &__placeView {
+        padding: 16px;
+        width: 180px;
+    }
+}
