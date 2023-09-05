@@ -27,8 +27,10 @@ router.get(
       const query = `${req.query.q}&limit=4`
       const products: ProductsQuery = await getProducts(query as string)
 
+      // Get categories from filer 'Categorias'
       const filter = products?.filters?.filter((p) => p.id === 'category')
 
+      // Set all categories into 1 string array
       const categories = filter[0]?.values
         ?.map((v) => v.path_from_root.map((p) => p.name))
         .flat(1)
@@ -38,9 +40,11 @@ router.get(
         categories,
         items: await Promise.all(
           products.results.map(async ({ id, title, ...r }) => {
+            // Get currency for each item
             const { decimal_places }: CurrencyData = await getProductCurrency(
               r.currency_id,
             )
+            // desired format
             return {
               id: id,
               title: title,
@@ -82,6 +86,7 @@ router.get(
         shipping: { free_shipping },
       }: ProductDetails = await getProductDetails(productId)
 
+      // additional information for the product
       const { plain_text }: ProductDescription =
         await getProductDescription(productId)
 
@@ -91,6 +96,7 @@ router.get(
       const { path_from_root }: ProductCategories =
         await getProductCategories(category_id)
 
+      // desired format
       const formattedDetails = {
         item: {
           id,

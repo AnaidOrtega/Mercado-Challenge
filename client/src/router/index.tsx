@@ -1,5 +1,5 @@
 import React from 'react'
-import { createBrowserRouter, createHashRouter } from 'react-router-dom'
+import { createHashRouter } from 'react-router-dom'
 import { ProductDetails, ProductList, RootLayout } from '../components'
 import { getProductDetail, getProducts } from '../api/products'
 
