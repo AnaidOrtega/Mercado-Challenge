@@ -1,9 +1,9 @@
 import React from 'react'
-import { createBrowserRouter } from 'react-router-dom'
+import { createBrowserRouter, createHashRouter } from 'react-router-dom'
 import { ProductDetails, ProductList, RootLayout } from '../components'
 import { getProductDetail, getProducts } from '../api/products'
 
-export const router = createBrowserRouter([
+export const router = createHashRouter([
   {
     path: '/',
     element: <RootLayout />,
